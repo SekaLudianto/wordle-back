@@ -90,6 +90,9 @@ setInterval(() => {
 
 // Serve frontend files
 app.use(express.static('public'));
+app.get('/', (req, res) => {
+    res.send('TikTok Live backend aktif');
+});
 
 // Start http listener
 const port = process.env.PORT || 8081;
